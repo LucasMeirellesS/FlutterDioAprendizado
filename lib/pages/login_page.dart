@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController =
-      TextEditingController(text: 'email@email.com');
+      TextEditingController(text: 'lucasmeirelles@dio.me');
   TextEditingController senhaController = TextEditingController(text: 'teste');
 
   bool isObscureText = true;
@@ -162,7 +162,8 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     debugPrint(emailController.text);
                     debugPrint(senhaController.text);
-                    if (emailController.text.trim() == 'email@email.com' &&
+                    if (emailController.text.trim() ==
+                            'lucasmeirelles@dio.me' &&
                         senhaController.text.trim() == 'teste') {
                       debugPrint("Login Efetuado com sucesso");
                       Navigator.pushReplacementNamed(context, '/app');

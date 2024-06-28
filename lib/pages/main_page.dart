@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:trilhaapp/pages/pagina2.dart';
 import 'package:trilhaapp/pages/pagina3.dart';
+import 'package:trilhaapp/shared/widgets/custon_drower.dart';
 import 'pagina1.dart';
 
 class MainPage extends StatefulWidget {
@@ -31,95 +32,7 @@ class _MainPageState extends State<MainPage> {
           ),
           backgroundColor: Colors.purple.shade900,
         ),
-        drawer: Drawer(
-          backgroundColor: Color.fromARGB(255, 77, 9, 119),
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              // DrawerHeader(
-              //   child: Text(
-              //     'Menu',
-              //     style: TextStyle(
-              //       color: Colors.white,
-              //     ),
-              //   ),
-              //   decoration: BoxDecoration(
-              //     color: Colors.purple.shade900,
-              //   ),
-              // ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 0.5),
-                ),
-                child: ListTile(
-                  title: Text(
-                    'Dados Cadastrais',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.pushNamed(context, '/cdados');
-                  },
-                ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 0.5),
-                ),
-                child: ListTile(
-                  title: Text(
-                    'Termos de uso e privacidade',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 0.5),
-                ),
-                child: ListTile(
-                  title: Text(
-                    'Configurações',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 0.5),
-                ),
-                child: ListTile(
-                  title: Text(
-                    'Sair',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.pushReplacementNamed(context, '/');
-                  },
-                ),
-              ),
-            ],
-          ),
-        ),
+        drawer: CustonDrower(),
         body: Column(
           children: [
             Expanded(
